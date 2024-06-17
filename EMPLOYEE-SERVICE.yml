@@ -49,8 +49,21 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 3
         slidingWindowSize: 10
         slidingWindowType: COUNT_BASED
+      ORGANIZATION-SERVICE:
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        minimumNumberOfCalls: 5
+        failureHealthIndicator: 50
+        registerHealthIndicator: true
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
   retry:
     instances:
+      ORGANIZATION-SERVICE:
+        registerHealthIndicator: true
+        waitDuration: 1s
+        maxRetryAttempts: 5
       DEPARTMENT-SERVICE:
         registerHealthIndicator: true
         waitDuration: 1s
