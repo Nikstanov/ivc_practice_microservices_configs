@@ -1,4 +1,11 @@
 spring:
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: quest
+    password: quest
+  zipkin:
+    base-url: http://zipkin:9411/
   datasource:
     driver-class-name: org.postgresql.Driver
     username: admin
@@ -13,9 +20,48 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
 server:
-  port: 8081
+  port: 8080
 
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      DEPARTMENT-SERVICE:
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        minimumNumberOfCalls: 5
+        failureHealthIndicator: 50
+        registerHealthIndicator: true
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
+  retry:
+    instances:
+      DEPARTMENT-SERVICE:
+        registerHealthIndicator: true
+        waitDuration: 1s
+        maxRetryAttempts: 5
+        
 management:
+  endpoint:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
   endpoints:
     web:
       exposure:
