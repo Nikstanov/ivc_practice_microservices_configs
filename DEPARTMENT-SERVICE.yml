@@ -36,9 +36,9 @@ management:
 
 springdoc:
   swagger-ui:
-    path : /gui-docs
+    path : /api/departments/gui-docs
   api-docs:
-    path : /api-docs
+    path : /api/departments/api-docs
 
 eureka:
   client:
