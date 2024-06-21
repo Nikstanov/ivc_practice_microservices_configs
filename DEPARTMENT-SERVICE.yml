@@ -8,6 +8,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     username: admin
+    password: {cipher}6e2355f04f1767a378273ae156ced7a34188abf7ac0faf30d9b543a890300d92b82786a6aee394f949d42c2cfcc8c6ea
     url: jdbc:postgresql://department-db:5432/department_db
   jpa:
     show-sql: true
