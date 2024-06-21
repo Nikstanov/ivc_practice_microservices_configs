@@ -3,13 +3,15 @@ spring:
     host: localhost
     port: 5672
     username: quest
-    password: {cipher}  53f6184fd8a68315b213c751d45453322f18efa45309481808690665ee7aff98f89f67a027cde6e708294728a24848d5
+    password: {cipher}
+    53f6184fd8a68315b213c751d45453322f18efa45309481808690665ee7aff98f89f67a027cde6e708294728a24848d5
   zipkin:
     base-url: http://localhost:9411/
   datasource:
     driver-class-name: org.postgresql.Driver
     username: admin
-    password: {cipher}  6e2355f04f1767a378273ae156ced7a34188abf7ac0faf30d9b543a890300d92b82786a6aee394f949d42c2cfcc8c6ea
+    password: {cipher}
+    6e2355f04f1767a378273ae156ced7a34188abf7ac0faf30d9b543a890300d92b82786a6aee394f949d42c2cfcc8c6ea
     url: jdbc:postgresql://localhost:5433/employee_db
   jpa:
     show-sql: true
