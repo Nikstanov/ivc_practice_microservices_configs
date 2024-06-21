@@ -3,8 +3,7 @@ spring:
     host: localhost
     port: 5672
     username: quest
-    password: {cipher}
-    53f6184fd8a68315b213c751d45453322f18efa45309481808690665ee7aff98f89f67a027cde6e708294728a24848d5
+    password: {cipher}53f6184fd8a68315b213c751d45453322f18efa45309481808690665ee7aff98f89f67a027cde6e708294728a24848d5
   zipkin:
     base-url: http://localhost:9411/
   datasource:
