@@ -2,7 +2,7 @@ spring:
   rabbitmq:
     host: rabbitmq
     port: 5672
-    password: '{cipher}53f6184fd8a68315b213c751d45453322f18efa45309481808690665ee7aff98f89f67a027cde6e708294728a24848d5'
+    password: '{cipher}41acdad551af1a17bda5e730d46323d968cccbc3d0fdd0c0c784be167137e50eefbf3b2997cbb745458c2c556bf127e6'
     username: quest
   zipkin:
     base-url: http://zipkin:9411/
