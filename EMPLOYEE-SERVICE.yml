@@ -94,6 +94,11 @@ springdoc:
     path : /api/employees/api-docs
 
 eureka:
+  instance:
+    metadataMap:
+      "prometheus.scrape": "true"
+      "prometheus.path": "/actuator/prometheus"
+      "prometheus.port": "8080"
   client:
     service-url:
       defaultZone: http://service-registry:8761/eureka/
