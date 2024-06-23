@@ -42,6 +42,7 @@ springdoc:
 
 eureka:
   instance:
+    preferIpAddress: true
     metadataMap:
       "prometheus.scrape": "true"
       "prometheus.path": "/actuator/prometheus"
