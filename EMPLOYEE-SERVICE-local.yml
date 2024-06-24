@@ -1,4 +1,19 @@
 spring:
+  kafka:
+    topic:
+      organization: organization-topic
+      department: department-topic
+    consumer:
+      bootstrap-servers: localhost:29092
+      group-id: ${random.uuid}
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "*"
   rabbitmq:
     host: localhost
     port: 5672
