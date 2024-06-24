@@ -3,13 +3,13 @@ spring:
     host: rabbitmq
     port: 5672
     username: quest
-    password: '{cipher}c7b66c962e8acc23bf13bc32da90c95a457c5966c2a321ebf9b6002400ce31e0'
+    password: '{cipher}8bb4eaeb32a074c2ff6628e28545314028d3124399075e83ddb6f8f112d18c11'
   zipkin:
     base-url: http://zipkin:9411/
   datasource:
     driver-class-name: org.postgresql.Driver
     username: admin
-    password: '{cipher}9eb71f46008e5f1d79aac9e2c771a12a02824c76703edf5300e9f8b059bfc31f7373e155da28e0821d5f03e0924bd97e'
+    password: '{cipher}065abb82fac3a020e77ba6a8e56122a191875a6cb32105eb81c0f4b211896d79ffa7699aa5d950656af105549b62d14c'
     url: jdbc:postgresql://employee-db:5432/employee_db
   jpa:
     show-sql: true
