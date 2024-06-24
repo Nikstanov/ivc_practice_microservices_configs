@@ -1,4 +1,11 @@
 spring:
+  kafka:
+    topic:
+      name: organization_topic
+    producer:
+      bootstrap-servers: kafka:29092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
   rabbitmq:
     host: rabbitmq
     port: 5672
