@@ -9,7 +9,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     username: admin
-    password: '{cipher}afd8ec4ded646760f0d515359c1e6f3c3e320a969cc58c6e7c31da4b704feed19cca1315c776a9442d4892bf727af781'
+    password: '{cipher}1ba27ea394638d4e0cc7be09e6ab4003abbafc312e4ac440e0ffbd17ef5e51647b12da8a2567200ff4656e16fdd2a6e6'
     url: jdbc:postgresql://employee-db:5432/employee_db
   jpa:
     show-sql: true
